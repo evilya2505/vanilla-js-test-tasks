@@ -1,0 +1,108 @@
+.calculator {
+  background-color: #bf285c;
+  width: 300px;
+  height: 450px;
+  border-radius: 20px;
+  padding: 20px;
+  box-sizing: border-box;
+
+  box-shadow: 0 0 15px 5px #bf285d7e; /* Свечение */
+}
+
+.calculator__buttons-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-start;
+
+  gap: 5px;
+}
+
+.calculator__monitor {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
+  height: 20%;
+}
+
+.calculator__number {
+  margin: 0;
+  min-height: 53px;
+  font-size: 45px;
+  color: #ffffffc5;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.calculator__copy-button {
+  align-self: flex-end;
+
+  background-color: #ffffffc5;
+  color: #bf285c;
+  font-size: 15px;
+  border-radius: 2px;
+  border: none;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.5 ease-in;
+}
+
+.calculator__copy-button:hover {
+  transition: all 0.5 ease-in;
+  box-shadow: 0 0 15px 5px #ffffff3f; /* Свечение */
+}
+
+.calculator__buttons {
+  height: 80%;
+  display: grid;
+  grid-template-areas:
+    "numbers right"
+    "bottom bottom";
+
+  gap: 5px;
+}
+
+.calculator__buttons-list_type_numbers {
+  grid-area: numbers;
+
+  justify-content: center;
+}
+
+.calculator__buttons-list_type_numbers .calculator__button {
+  background-color: rgba(255, 255, 255, 0.473);
+}
+
+.calculator__buttons-list_type_symbols-right {
+  flex-direction: column;
+
+  grid-area: right;
+}
+
+.calculator__buttons-list_type_symbols-bottom {
+  justify-content: flex-end;
+  justify-content: space-evenly;
+
+  grid-area: bottom;
+}
+
+.calculator__button {
+  width: 60px;
+  height: 60px;
+
+  background-color: #ffffffc0;
+  border: none;
+  border-radius: 5px;
+  transition: all 0.5 ease-in;
+
+  cursor: pointer;
+}
+
+.calculator__button:hover {
+  transition: all 0.5 ease-in;
+  box-shadow: 0 0 15px 5px #ffffff3f; /* Свечение */
+}

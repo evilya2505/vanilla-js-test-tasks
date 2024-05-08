@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./pages/index.css" />
+
+    <title>Калькулятор</title>
+  </head>
+  <body class="page">
+    <main class="main page__main">
+      <div class="calculator main__calculator">
+        <div class="calculator__monitor">
+          <p class="calculator__number"></p>
+          <button class="calculator__copy-button">Копировать</button>
+        </div>
+        <div class="calculator__buttons">
+          <ul
+            class="calculator__buttons-list calculator__buttons-list_type_numbers"
+          ></ul>
+          <ul
+            class="calculator__buttons-list calculator__buttons-list_type_symbols-right"
+          ></ul>
+          <ul
+            class="calculator__buttons-list calculator__buttons-list_type_symbols-bottom"
+          ></ul>
+        </div>
+      </div>
+    </main>
+    <!-- Number Button Template  -->
+    <template id="button-template">
+      <li class="calculator__button-item">
+        <button class="calculator__button"></button>
+      </li>
+    </template>
+    <!-- Number Button Template  -->
+    <script type="module" src="./pages/index.js"></script>
+  </body>
+</html>
