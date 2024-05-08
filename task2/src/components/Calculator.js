@@ -74,7 +74,8 @@ export class Calculator {
         currentText
           .split(" ")
           [currentText.split(" ").length - 1].includes(".") ||
-        currentText === ""
+        currentText === "" ||
+        currentText.split(" ")[currentText.split(" ").length - 1] === ""
       )
         return;
     }
@@ -122,13 +123,13 @@ export class Calculator {
 
       if (expression[i] === "(") {
         operators.push(expression[i]);
-      } else if (/\d/.test(expression[i])) {
-        let val = 0;
-        while (i < expression.length && /\d/.test(expression[i])) {
-          val = val * 10 + (expression[i] - "0");
+      } else if (/\d|\./.test(expression[i])) {
+        let valStr = "";
+        while (i < expression.length && /\d|\./.test(expression[i])) {
+          valStr += expression[i];
           i++;
         }
-        values.push(val);
+        values.push(parseFloat(valStr));
         i--;
       } else if (expression[i] === ")") {
         while (operators.length && operators[operators.length - 1] !== "(") {
@@ -163,7 +164,6 @@ export class Calculator {
 
     return values.pop();
   }
-
   calculate() {
     this._element = document.querySelector(this._monitorClassSelector);
 

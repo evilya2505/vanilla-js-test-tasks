@@ -34,6 +34,7 @@
   min-height: 53px;
   font-size: 45px;
   color: #ffffffc5;
+  max-width: 100%;
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;

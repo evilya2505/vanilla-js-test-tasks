@@ -13,7 +13,7 @@ import {
   brackets,
   operators,
 } from "../utils/constants.js";
-import { Calculator } from "../components/calculator.js";
+import { Calculator } from "../components/Calculator.js";
 
 const calculator = new Calculator(monitorClassSelector);
 
