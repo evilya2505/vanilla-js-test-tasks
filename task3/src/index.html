@@ -4,8 +4,55 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./pages/index.css" />
-    <title>Бабушка и кошки</title>
+    <title>Котики и миска</title>
   </head>
-  <script type="module" src="./pages/index.js"></script>
-  <body></body>
+  <body class="page">
+    <main class="main page__main">
+      <form class="form main__form">
+        <div class="form__input-container">
+          <label class="form__label"
+            >Количество котиков (n):
+            <input class="form__input" type="number" id="numCats" value="3"
+          /></label>
+        </div>
+
+        <div class="form__input-container">
+          <label class="form__label"
+            >Вместистельность миски (m):
+            <input
+              class="form__input"
+              type="number"
+              id="bowlCapacity"
+              value="5"
+          /></label>
+          <label>*Не может быть меньше, чем b</label>
+        </div>
+
+        <div class="form__input-container">
+          <label class="form__label"
+            >Количество еды, которое нужно котику, чтобы наесться (b):
+            <input class="form__input" type="number" id="foodNeeded" value="2"
+          /></label>
+          <label>*Не может быть больше, чем m</label>
+        </div>
+        <div class="form__input-container">
+          <label class="form__label"
+            >Время еды (t/сек):
+            <input class="form__input" type="number" id="eatingTime" value="3"
+          /></label>
+        </div>
+
+        <div class="form__input-container">
+          <label class="form__label"
+            >Время наполнения (r/сек):
+            <input class="form__input" type="number" id="refillTime" value="2"
+          /></label>
+        </div>
+        <label class="form__error-label"></label>
+        <button class="form__button">Запустить</button>
+      </form>
+      <div class="main__status"></div>
+    </main>
+    <script type="module" src="./pages/index.js"></script>
+  </body>
 </html>

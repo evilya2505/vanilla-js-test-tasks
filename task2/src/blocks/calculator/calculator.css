@@ -49,11 +49,11 @@
   border: none;
   text-transform: uppercase;
   cursor: pointer;
-  transition: all 0.5 ease-in;
+  transition: all 0.5s ease-in;
 }
 
 .calculator__copy-button:hover {
-  transition: all 0.5 ease-in;
+  transition: all 0.5s ease-in;
   box-shadow: 0 0 15px 5px #ffffff3f; /* Свечение */
 }
 
@@ -97,12 +97,12 @@
   background-color: #ffffffc0;
   border: none;
   border-radius: 5px;
-  transition: all 0.5 ease-in;
+  transition: all 0.5s ease-in;
 
   cursor: pointer;
 }
 
 .calculator__button:hover {
-  transition: all 0.5 ease-in;
+  transition: all 0.5s ease-in;
   box-shadow: 0 0 15px 5px #ffffff3f; /* Свечение */
 }
